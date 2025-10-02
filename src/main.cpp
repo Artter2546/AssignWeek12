@@ -1,18 +1,18 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#define LED_PIN 2   // GPIO2 บน ESP32 (LED บนบอร์ด)
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+    pinMode(LED_PIN, OUTPUT);
+    Serial.begin(115200);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
+    digitalWrite(LED_PIN, HIGH);
+    Serial.println("LED ON");
+    delay(2000);
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+    digitalWrite(LED_PIN, LOW);
+    Serial.println("LED OFF");
+    delay(2000);
 }
