@@ -10,9 +10,9 @@ void setup() {
 void loop() {
     digitalWrite(LED_PIN, HIGH);
     Serial.println("LED ON");
-    delay(500);
+    delay(50000);
 
     digitalWrite(LED_PIN, LOW);
     Serial.println("LED OFF");
-    delay(500);
+    delay(50000);
 }
